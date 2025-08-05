@@ -1,27 +1,33 @@
 package MinhaPrimeiraAplicacao.AplicandoPOO;
 
+//import MinhaPrimeiraAplicacao.AplicandoPOO.Filme; - import é a forma que uma classe se referencia a outra quando estão em pacotes diferentes
+
 public class Main {
     public static void main(String[] args) {
-        Filme poderosoChefao = new Filme();
-        poderosoChefao.nome = "O poderoso chefão";
-        poderosoChefao.anoDeLancamento = 1970;
-        poderosoChefao.duracaoEmMinutos = 180;
+        /*
+        Classe - Define a estrutura e comportamento dos objs.
+        Instância - NomeClass nomeClass = new NomeClass();
+        Objeto - nomeClass é meu objeto da classe NomeClass
+        Atributo - String modelo, int ano, dentro da class.
+        Método - Bloco de codigo que realiza uma ação específica, define o comportamento do objeto - void acelerar(){}
 
-        Filme topGun = new Filme();
-        topGun.nome = "Top Gun";
-        topGun.anoDeLancamento = 1980;
-        topGun.duracaoEmMinutos = 185;
+        */
 
-        poderosoChefao.exibeFichaTecnica();
-        topGun.exibeFichaTecnica();
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+        meuFilme.setIncluidoNoPlano(true);
 
-        poderosoChefao.avalia(8);
-        poderosoChefao.avalia(5);
-        poderosoChefao.avalia(10);
+        meuFilme.exibeFichaTecnica();
 
-        System.out.println(poderosoChefao.somaDasAvaliacoes);
-        System.out.println(poderosoChefao.totalDeAvaliacoes);
-        System.out.println(poderosoChefao.pegaMedia());
+        meuFilme.avalia(8);
+        meuFilme.avalia(5);
+        meuFilme.avalia(10);
+
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+        System.out.println(meuFilme.pegaMedia());
+
 
     }
 
