@@ -3,6 +3,7 @@ package AplicacaoPoo;
 //import MinhaPrimeiraAplicacao.AplicandoPOO.Poo.Filme; - import é a forma que uma classe se referencia a outra quando estão em pacotes diferentes
 
 import AplicacaoPoo.calculos.CalculadoraDeTempo;
+import AplicacaoPoo.calculos.FiltroRecomendacao;
 import AplicacaoPoo.modelos.Filme;
 import AplicacaoPoo.modelos.Serie;
 
@@ -53,6 +54,9 @@ public class Main {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
+        filtroRecomendacao.filtra(meuFilme);
 
 
 
