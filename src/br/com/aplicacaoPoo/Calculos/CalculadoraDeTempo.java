@@ -1,0 +1,15 @@
+package br.com.aplicacaoPoo.Calculos;
+
+import br.com.aplicacaoPoo.Modelos.Titulo;
+
+public class CalculadoraDeTempo {
+    private int tempoTotal;
+
+    public int getTempoTotal() {
+        return tempoTotal;
+    }
+    //                 Super class | nome da class
+    public void inclui(Titulo titulo){
+        tempoTotal += titulo.getDuracaoEmMinutos();
+    }
+}
