@@ -14,6 +14,14 @@ public class Titulo {
     //get - getters - obter valor
     //set - setters - atribuir valor
 
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }

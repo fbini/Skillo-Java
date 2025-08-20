@@ -32,6 +32,10 @@ public class Episodio implements Classificavel {
         this.serie = serie;
     }
 
+    public void setTotalVizualizacao(int totalVizualizacao) {
+        this.totalVizualizacao = totalVizualizacao;
+    }
+
     @Override
     public int getClassificacao() {
        if (totalVizualizacao > 100){

@@ -4,8 +4,11 @@ package br.com.aplicacaoPoo;
 
 import br.com.aplicacaoPoo.Calculos.CalculadoraDeTempo;
 import br.com.aplicacaoPoo.Calculos.FiltroRecomendacao;
+import br.com.aplicacaoPoo.Modelos.Episodio;
 import br.com.aplicacaoPoo.Modelos.Filme;
 import br.com.aplicacaoPoo.Modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +20,7 @@ public class Main {
         Metodo - Bloco de codigo que realiza uma ação específica, define o comportamento do objeto - void acelerar(){}
 
         */
+
 
         Filme meuFilme = new Filme();
         meuFilme.setNome("O poderoso chefão");
@@ -57,6 +61,34 @@ public class Main {
 
         FiltroRecomendacao filtroRecomendacao = new FiltroRecomendacao();
         filtroRecomendacao.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVizualizacao(300);
+        filtroRecomendacao.filtra(episodio);
+
+        var filmeDaBin = new Filme();
+        filmeDaBin.setDuracaoEmMinutos(200);
+        filmeDaBin.setNome("Star Wars V");
+        filmeDaBin.setAnoDeLancamento(1980);
+        filmeDaBin.avalia(10);
+
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDaBin);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println("Segundo filme " + listaDeFilmes.get(1).getNome());
+        System.out.println("Terceiro filme " + listaDeFilmes.get(2).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
+
+
 
 
 
