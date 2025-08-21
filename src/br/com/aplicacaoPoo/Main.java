@@ -88,10 +88,6 @@ public class Main {
         System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
 
 
-
-
-
-
     }
 
 }
