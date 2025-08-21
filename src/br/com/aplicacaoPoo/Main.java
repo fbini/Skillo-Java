@@ -21,10 +21,7 @@ public class Main {
 
         */
 
-
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.setIncluidoNoPlano(true);
 
@@ -38,9 +35,7 @@ public class Main {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2010);
+        Serie lost = new Serie("Lost", 2010);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpsPorTemporada(10);
@@ -48,9 +43,7 @@ public class Main {
         System.out.println("Duração do filme: " + lost.getDuracaoEmMinutos());
 
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("O poderoso chefão");
-        outroFilme.setAnoDeLancamento(1970);
+        Filme outroFilme = new Filme("O poderoso chefão",1970);
         outroFilme.setDuracaoEmMinutos(180);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -68,10 +61,8 @@ public class Main {
         episodio.setTotalVizualizacao(300);
         filtroRecomendacao.filtra(episodio);
 
-        var filmeDaBin = new Filme();
+        var filmeDaBin = new Filme("Star Wars V", 1980);
         filmeDaBin.setDuracaoEmMinutos(200);
-        filmeDaBin.setNome("Star Wars V");
-        filmeDaBin.setAnoDeLancamento(1980);
         filmeDaBin.avalia(10);
 
 

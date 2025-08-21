@@ -4,7 +4,12 @@ import br.com.aplicacaoPoo.Calculos.Classificavel;
 
 // extends - palavra reservada que aplica herança á uma classe
 public class Filme extends Titulo implements Classificavel {
+
     private String diretor;
+
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
 
     public String getDiretor() {
         return diretor;

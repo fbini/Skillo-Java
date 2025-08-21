@@ -14,6 +14,12 @@ public class Titulo {
     //get - getters - obter valor
     //set - setters - atribuir valor
 
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public int getAnoDeLancamento() {
         return anoDeLancamento;
     }
@@ -26,9 +32,6 @@ public class Titulo {
         return totalDeAvaliacoes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano)
     {
@@ -40,10 +43,6 @@ public class Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    public void setAnoDeLancamento(int anoDeLancamento) {
-
-        this.anoDeLancamento = anoDeLancamento;
-    }
 
     public void exibeFichaTecnica (){
         System.out.println("Nome do filme: " + nome);
