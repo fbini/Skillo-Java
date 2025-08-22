@@ -8,6 +8,8 @@ public class MainProduto {
         Produto boloDeCenoura = new Produto("Bolo de cenoura", 30, 2);
         Produto chocolate = new Produto("Chocolate", 7, 5);
 
+        ProdutoPerrecivel produtoPerrecivel = new ProdutoPerrecivel("Batata", 2.50,3,"10-10-2025");
+
         ArrayList<Produto> listaDeProdutos = new ArrayList<>();
         listaDeProdutos.add(balinhasDeMorango);
         listaDeProdutos.add(boloDeCenoura);

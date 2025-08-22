@@ -1,4 +1,4 @@
-package br.com.aplicacaoPoo;
+package br.com.aplicacaoPoo.Main;
 
 //import MinhaPrimeiraAplicacao.AplicandoPOO.Poo.Filme; - import é a forma que uma classe se referencia a outra quando estão em pacotes diferentes
 
