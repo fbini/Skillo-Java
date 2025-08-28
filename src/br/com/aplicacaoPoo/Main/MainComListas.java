@@ -5,6 +5,7 @@ import br.com.aplicacaoPoo.Modelos.Serie;
 import br.com.aplicacaoPoo.Modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainComListas {
     public static void main(String[] args) {
@@ -40,8 +41,19 @@ public class MainComListas {
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
 
-
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Angrid");
+        buscaPorArtista.add("Cosé");
+        buscaPorArtista.add("Bariana");
+        buscaPorArtista.add("Dabriel");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+
 
     }
 }

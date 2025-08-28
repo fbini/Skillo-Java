@@ -13,9 +13,17 @@ public class MainProdutos {
         lista.add(produto_2);
         lista.add(produto_3);
 
-        for (Produto item: lista) {
-            System.out.println(item.getNome());
+        double somaPreco = 0;
+        for (Produto produto : lista) {
+            somaPreco += produto.getPreco();
+
         }
+
+        double precoMedio = somaPreco / lista.size();
+        System.out.println("Preço médio: " + precoMedio);
+
+
+
 
     }
 }
