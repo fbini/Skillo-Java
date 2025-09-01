@@ -1,6 +1,6 @@
 package br.com.aplicacaoPoo.Modelos;
 
-public class Titulo {
+public class Titulo implements Comparable <Titulo> {
     //todos os atributos precisam ser privado
 
     private String nome;
@@ -60,6 +60,12 @@ public class Titulo {
 
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
+    }
+
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }
 
