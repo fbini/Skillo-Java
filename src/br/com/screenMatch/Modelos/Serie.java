@@ -1,4 +1,4 @@
-package br.com.aplicacaoPoo.Modelos;
+package br.com.screenMatch.Modelos;
 
 public class Serie extends Titulo {
     private int temporadas;

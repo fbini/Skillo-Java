@@ -1,7 +1,5 @@
 package br.com.atividadesArrayList.Desafio01;
 
-import br.com.aplicacaoPoo.Modelos.Filme;
-
 import java.util.ArrayList;
 
 public class MainPessoa {

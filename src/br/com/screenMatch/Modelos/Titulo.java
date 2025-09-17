@@ -1,4 +1,4 @@
-package br.com.aplicacaoPoo.Modelos;
+package br.com.screenMatch.Modelos;
 
 public class Titulo implements Comparable <Titulo> {
     //todos os atributos precisam ser privado

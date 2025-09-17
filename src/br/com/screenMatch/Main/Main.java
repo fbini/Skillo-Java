@@ -1,12 +1,12 @@
-package br.com.aplicacaoPoo.Main;
+package br.com.screenMatch.Main;
 
 //import MinhaPrimeiraAplicacao.AplicandoPOO.Poo.Filme; - import é a forma que uma classe se referencia a outra quando estão em pacotes diferentes
 
-import br.com.aplicacaoPoo.Calculos.CalculadoraDeTempo;
-import br.com.aplicacaoPoo.Calculos.FiltroRecomendacao;
-import br.com.aplicacaoPoo.Modelos.Episodio;
-import br.com.aplicacaoPoo.Modelos.Filme;
-import br.com.aplicacaoPoo.Modelos.Serie;
+import br.com.screenMatch.Calculos.CalculadoraDeTempo;
+import br.com.screenMatch.Calculos.FiltroRecomendacao;
+import br.com.screenMatch.Modelos.Episodio;
+import br.com.screenMatch.Modelos.Filme;
+import br.com.screenMatch.Modelos.Serie;
 
 import java.util.ArrayList;
 

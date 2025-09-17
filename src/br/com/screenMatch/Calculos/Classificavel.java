@@ -1,4 +1,4 @@
-package br.com.aplicacaoPoo.Calculos;
+package br.com.screenMatch.Calculos;
 
 //
 public interface Classificavel {

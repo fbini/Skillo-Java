@@ -1,8 +1,8 @@
-package br.com.aplicacaoPoo.Main;
+package br.com.screenMatch.Main;
 
-import br.com.aplicacaoPoo.Modelos.Filme;
-import br.com.aplicacaoPoo.Modelos.Serie;
-import br.com.aplicacaoPoo.Modelos.Titulo;
+import br.com.screenMatch.Modelos.Filme;
+import br.com.screenMatch.Modelos.Serie;
+import br.com.screenMatch.Modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;

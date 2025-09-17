@@ -1,6 +1,6 @@
-package br.com.aplicacaoPoo.Modelos;
+package br.com.screenMatch.Modelos;
 
-import br.com.aplicacaoPoo.Calculos.Classificavel;
+import br.com.screenMatch.Calculos.Classificavel;
 
 // extends - palavra reservada que aplica herança á uma classe
 public class Filme extends Titulo implements Classificavel {

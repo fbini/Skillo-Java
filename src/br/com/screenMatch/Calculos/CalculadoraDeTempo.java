@@ -1,6 +1,6 @@
-package br.com.aplicacaoPoo.Calculos;
+package br.com.screenMatch.Calculos;
 
-import br.com.aplicacaoPoo.Modelos.Titulo;
+import br.com.screenMatch.Modelos.Titulo;
 
 public class CalculadoraDeTempo {
     private int tempoTotal;

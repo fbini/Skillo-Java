@@ -1,6 +1,6 @@
-package br.com.aplicacaoPoo.Modelos;
+package br.com.screenMatch.Modelos;
 
-import br.com.aplicacaoPoo.Calculos.Classificavel;
+import br.com.screenMatch.Calculos.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
