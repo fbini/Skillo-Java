@@ -1,9 +1,14 @@
 package br.com.screenMatch.Modelos;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serial;
+
 public class Titulo implements Comparable <Titulo> {
     //todos os atributos precisam ser privado
-
+    @SerializedName("Title")
     private String nome;
+    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     //private - limita o acesso ao elemento apenas á própria classe onde foi definido
@@ -18,6 +23,11 @@ public class Titulo implements Comparable <Titulo> {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nome = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
     }
 
     public int getAnoDeLancamento() {
