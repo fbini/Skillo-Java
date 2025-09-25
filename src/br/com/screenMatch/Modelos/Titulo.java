@@ -1,14 +1,13 @@
 package br.com.screenMatch.Modelos;
 
+import br.com.screenMatch.execcao.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serial;
 
 public class Titulo implements Comparable <Titulo> {
     //todos os atributos precisam ser privado
-    @SerializedName("Title")
     private String nome;
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     //private - limita o acesso ao elemento apenas á própria classe onde foi definido
@@ -26,6 +25,11 @@ public class Titulo implements Comparable <Titulo> {
     }
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
+        if (meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano" +
+                    " porque tem mais de 04 caracters");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
     }

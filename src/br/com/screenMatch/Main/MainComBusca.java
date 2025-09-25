@@ -2,6 +2,7 @@ package br.com.screenMatch.Main;
 
 import br.com.screenMatch.Modelos.Titulo;
 import br.com.screenMatch.Modelos.TituloOmdb;
+import br.com.screenMatch.execcao.ErroDeConversaoDeAnoException;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,7 +20,7 @@ public class MainComBusca {
         System.out.println("Digite um filme ou uma Série para a busca: ");
         String busca = scanner.nextLine();
 
-        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=9025175";
+        String endereco = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=9025175";
         try{
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -41,13 +42,18 @@ public class MainComBusca {
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println("Titulo convertido");
             System.out.println(meuTitulo);
+
         } catch (NumberFormatException e){
             System.out.println("Aconteceu um erro");
             System.out.println(e.getMessage());
+
         } catch (IllegalArgumentException e) {
             System.out.println("Algum erro de argumento na busca");
 
+        } catch (ErroDeConversaoDeAnoException e){
+            System.out.println(e.getMessage());
         }
+
         System.out.println("O programa finalizou corretamente");
     }
 }
