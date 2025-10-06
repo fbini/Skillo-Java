@@ -1,4 +1,4 @@
-package br.com.praticandoAPIs.CriptoMoeda;
+package br.com.praticandoAPIs.Desafio01.Books;
 
 import java.io.IOException;
 import java.net.URI;
@@ -7,22 +7,20 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class MainCripto {
+public class MainBooks {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o nome da criptomoeda para a cotação (por exemplo, bitcoin): ");
-        String busca = scanner.nextLine();
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Digite o título do livro para a busca: ");
+        String busca = teclado.nextLine();
 
-        String endereco = "https://api.coingecko.com/api/v3/simple/price?ids=" + busca + "&vs_currencies=usd";
+        String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + busca;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endereco))
                 .build();
-
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
-
     }
 }

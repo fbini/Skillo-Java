@@ -1,4 +1,4 @@
-package br.com.praticandoAPIs.Receitas;
+package br.com.praticandoAPIs.Desafio01.Receitas;
 
 import java.io.IOException;
 import java.net.URI;
